@@ -1,11 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 ---
 
 <Layout title="Portafolio | Eduardo Fuentes Reyes">
   <main>
-    <h1>Hola! soy Eduardo o eduuudev en mis redes.</h1>
-    <h2>+3 años de experiencia. Desarrollador web enfocado en el backend.</h2>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1
+        id="element"
+        class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-4"
+      >
+      </h1>
+      <h2 class="text-xl opacity-80 px-3 flex justify-center">
+        +3 años de experiencia. Desarrollador web enfocado en el backend, De
+        Chile 🇨🇱. Especializado en crear aplicaciones robustas y eficientes.
+      </h2>
+    </section>
   </main>
 </Layout>
+<script>
+  import Typed from "typed.js";
+  var typed = new Typed("#element", {
+    strings: ["Hola! soy Eduardo Fuentes"],
+    typeSpeed: 50,
+  });
+</script>
