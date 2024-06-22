@@ -1,8 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SocialBubble from "../components/SocialBubble.astro";
+import LinkedinIcon from "../icons/Linkedin.astro";
+import GithubIcon from "../icons/Github.astro";
+import InstagramIcon from "../icons/Instagram.astro";
 ---
 
-<Layout title="Portafolio | Eduardo Fuentes Reyes Desarrollador web backend">
+<Layout
+  title="Portafolio | Eduardo Fuentes Reyes Desarrollador web backend"
+  description="Eduardo Fuentes Reyes, desarrollador backend especializado en crear soluciones robustas y eficientes."
+>
   <main>
     <section class="w-full lg:w-[740px] mx-auto py-44">
       <h1
@@ -20,9 +27,24 @@ import Layout from "../layouts/Layout.astro";
         >
         <span class="opacity-75">Chile 🇨🇱.</span>
       </h2>
+      <nav class="flex gap-x-2 mt-8">
+        <SocialBubble href="https://www.linkedin.com/in/eduardofuentesreyes/">
+          <LinkedinIcon class="size-6" />
+          LinkedIn
+        </SocialBubble>
+        <SocialBubble href="https://github.com/eduardo732">
+          <GithubIcon class="size-6" />
+          GitHub
+        </SocialBubble>
+        <SocialBubble href="https://www.instagram.com/eduuu.dev/">
+          <InstagramIcon class="size-6" />
+          Instagram
+        </SocialBubble>
+      </nav>
     </section>
   </main>
 </Layout>
+
 <script>
   import Typed from "typed.js";
   new Typed("#title-typed", {
