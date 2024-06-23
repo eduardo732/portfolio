@@ -1,0 +1,44 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    id: 1,
+    date: "Junio 2021",
+    title: "Analista programador - Jefe de proyecto Mantenciones | AMS ASICOM",
+    description: `Mi enfoque estuvo en el análisis y comprensión del código de los portales de AMS. Posteriormente, amplié mis habilidades al
+implementar soluciones en distintos lenguajes de programación. En mi rol de Jefe de Mantenimiento de Proyectos, lideré la
+gestión de recursos para el desarrollo de soporte, pasos a producción y mantenimiento de portales. Todas estas actividades
+se llevaron a cabo en un entorno con tecnologías tales como: PHP, MongoDB, Docker, HTML, CSS, JQuery, Golang,
+Javascript, Sql Server.`,
+  },
+  {
+    id: 2,
+    date: "Marzo 2022",
+    title: "Desarrollador Backend | Quintess",
+    description: `Mi enfoque estuvo en la creación y mantenimiento de microservicios. Seguí los estandares de la empresa a nivel de
+arquitectura, documentación, patrones de diseño, metodología ágil y control de versiones. Todas estas actividades se
+llevaron a cabo en un entorno con tecnologías tales como: Java, Spring Boot, SQL Server, Git, Jira, OpenShift, etc.`,
+  },
+  {
+    id: 3,
+    date: "Agosto 2022",
+    title: "Desarrollador Backend | Inovabiz",
+    description: `Desarrollo proyecto [Consultas Al Mercado]: Implementé el backend del proyecto guíado por el arquitecto de la empresa,
+donde aprendí sobre arquitectura limpia, con un diseño basado en el dominio. Además, apliqué patrones de diseño y event
+sourcing para garantizar un componente robusto. Mantenciones [Registro de Proveedores]: Aquí me uní al equipo de
+mantenciones del proyecto de registro de proveedores, en donde tuve que tomar, analizar, documentar y resolver bugs que
+se presentan en la plataforma. Todas estas actividades se llevaron a cabo en un entorno con tecnologías tales como: Java,
+Spring Boot, SQL Server, Git, Jira, OpenShift, etc.`,
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    )).reverse()
+  }
+</ol>

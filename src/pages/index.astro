@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Experience from "../components/Experience.astro";
 import SocialBubble from "../components/SocialBubble.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 import LinkedinIcon from "../icons/Linkedin.astro";
 import GithubIcon from "../icons/Github.astro";
 import InstagramIcon from "../icons/Instagram.astro";
@@ -11,7 +13,7 @@ import InstagramIcon from "../icons/Instagram.astro";
   description="Eduardo Fuentes Reyes, desarrollador backend especializado en crear soluciones robustas y eficientes."
 >
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer>
       <h1
         id="title-typed"
         class="text-white text-5xl font-bold flex justify-center flex-row gap-x-5 pb-5"
@@ -27,7 +29,7 @@ import InstagramIcon from "../icons/Instagram.astro";
         >
         <span class="opacity-75">Chile 🇨🇱.</span>
       </h2>
-      <nav class="flex gap-x-2 mt-8">
+      <nav class="flex justify-center gap-x-2 mt-8">
         <SocialBubble href="https://www.linkedin.com/in/eduardofuentesreyes/">
           <LinkedinIcon class="size-6" />
           LinkedIn
@@ -41,7 +43,11 @@ import InstagramIcon from "../icons/Instagram.astro";
           Instagram
         </SocialBubble>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer>
+      <h2 class="text-2xl font-semibold mb-4">Experiencia Laboral</h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
 
@@ -49,7 +55,7 @@ import InstagramIcon from "../icons/Instagram.astro";
   import Typed from "typed.js";
   new Typed("#title-typed", {
     strings: ["Hola! soy Eduardo Fuentes"],
-    typeSpeed: 50,
+    typeSpeed: 70,
     showCursor: false,
   });
 </script>
