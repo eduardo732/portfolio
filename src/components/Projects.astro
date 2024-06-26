@@ -1,0 +1,29 @@
+---
+const PROJECTS = [
+  {
+    title: "Prueba de concepto | Desarrollo guiado por el dominio",
+    description: "Proyecto realizado para comprender la potencia de una arquitectura hexagonal, con un desarrollo guiado por el dominio logrando así un software robusto y eficiente.",
+    link: "#",
+    github: "https://github.com/eduardo732/cleanArquitecture",
+    image: "/public/projects/cleanArquitecture.webp",
+    tags: ["Java", "Springboot", "Arquitectura Limpia", "Patrones de diseño", "Código Limpio", "Eventos", "Pruebas unitarias"],
+  },
+  
+];
+---
+
+{
+PROJECTS.map(({ title, description, image, github, tags }) => (
+    <article class="my-3">
+      <h3 class="text-2xl font-semibold text-blue-400/100 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-justify">{description}</p>
+      <ul class="flex flex-row">
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+<a class="text-blue-400/100 font-semibold hover:text-white" href={github} target="_blank"> ➡️Mira el código aqui!</a>
+      <img class="rounded shadow-2xl shadow-white/10" src={image} alt=`Captura de pantalla ${image} `>
+    </article>
+  ))
+}
