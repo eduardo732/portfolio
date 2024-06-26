@@ -1,3 +1,14 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+const LINKS = [
+  { name: "Inicio", ref: "/" },
+  { name: "Experiencia", ref: "#experiencia" },
+  { name: "Proyectos", ref: "#proyectos" },
+  { name: "Sobre mi", ref: "#sobre-mi" },
+  { name: "Contacto", ref: "#contacto" },
+];
+---
+
 <header class="items-center py-3 mx-auto">
   <nav class="opacity-80">
     <div
@@ -39,41 +50,13 @@
         <ul
           class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
         >
-          <li class="w-full">
-            <a
-              href="/"
-              class="w-full flex flex-col items-center py-2 px-3 text-white rounded hover:bg-blue-700 md:bg-transparent md:hover:text-blue-400/100 md:p-0 dark:text-white md:dark:text-blue-500"
-              aria-current="page">Inicio</a
-            >
-          </li>
-          <li class="w-full">
-            <a
-              href="#experiencia"
-              class="w-full flex flex-col items-center py-2 px-3 text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-400/100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >Experiencia</a
-            >
-          </li>
-          <li class="w-full">
-            <a
-              href="#proyectos"
-              class="w-full flex flex-col items-center py-2 px-3 text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-400/100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >Proyectos</a
-            >
-          </li>
-          <li class="w-full">
-            <a
-              href="#sobre-mi"
-              class="w-full flex flex-col items-center py-2 px-3 text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-400/100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >Sobre mi</a
-            >
-          </li>
-          <li class="w-full">
-            <a
-              href="#contacto"
-              class="w-full flex flex-col items-center py-2 px-3 text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-400/100 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >Contacto</a
-            >
-          </li>
+          {
+            LINKS.map((link) => (
+              <li class="md:w-auto">
+                <HeaderLink {...link} />
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
