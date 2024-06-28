@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Experience from "../components/Experience.astro";
-import SocialBubble from "../components/SocialBubble.astro";
+import Bubble from "../components/Bubble.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
 import LinkedinIcon from "../icons/Linkedin.astro";
@@ -35,18 +35,18 @@ import CodeIcon from "../icons/Code.astro";
       <nav
         class="flex flex-col lg:flex-row justify-center items-center gap-x-2 mt-8 mx-4"
       >
-        <SocialBubble href="https://www.linkedin.com/in/eduardofuentesreyes/">
+        <Bubble ref="https://www.linkedin.com/in/eduardofuentesreyes/">
           <LinkedinIcon class="size-6" />
           LinkedIn
-        </SocialBubble>
-        <SocialBubble href="https://github.com/eduardo732">
+        </Bubble>
+        <Bubble ref="https://github.com/eduardo732">
           <GithubIcon class="size-6" />
           GitHub
-        </SocialBubble>
-        <SocialBubble href="https://www.instagram.com/eduuu.dev/">
+        </Bubble>
+        <Bubble ref="https://www.instagram.com/eduuu.dev/">
           <InstagramIcon class="size-6" />
           Instagram
-        </SocialBubble>
+        </Bubble>
       </nav>
     </SectionContainer>
     <SectionContainer id="experiencia">

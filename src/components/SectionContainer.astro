@@ -5,6 +5,14 @@ const { id, className } = Astro.props;
 <section
   id={id}
   class=`w-full lg:w-[750px] flex justify-center flex-col gap-x-5 mx-auto py-24 lg:py-44 ${className}`
+  data-aos="fade-up"
+  data-aos-offset="150"
+  data-aos-delay="30"
+  data-aos-duration="500"
+  data-aos-easing="ease-in-out"
+  data-aos-mirror="true"
+  data-aos-once="false"
+  data-aos-anchor-placement="top-center"
 >
   <slot />
 </section>
