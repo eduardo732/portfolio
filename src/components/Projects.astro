@@ -1,21 +1,28 @@
 ---
-import Bubble from "./Bubble.astro";
 const PROJECTS = [
   {
     title: "Prueba de concepto | Desarrollo guiado por el dominio",
     description: "Proyecto realizado para comprender la potencia de una arquitectura hexagonal, con un desarrollo guiado por el dominio logrando así un software robusto y eficiente.",
-    link: "#",
+    link: "",
     github: "https://github.com/eduardo732/cleanArquitecture",
     image: "/projects/cleanArquitecture.webp",
     tags: ["Java", "Springboot", "Arquitectura Limpia", "Patrones de diseño", "Código Limpio", "Eventos", "Pruebas unitarias"],
   },
+  {
+    title: "Migración de Consultas Al Mercado | Mercado Público",
+description: "Encargado de la migración del módulo de Consultas al Mercado, por el lado del Backend.",
+    link: "https://www.mercadopublico.cl/Home/Contenidos/QueEsConsultaMercado",
+    github: "",
+    image: "/projects/cam.webp",
+    tags: ["Java", "Springboot", "Arquitectura Limpia", "Patrones de diseño", "Código Limpio", "Eventos", "Pruebas unitarias"] 
+  }
   
 ];
 ---
 
 {
-PROJECTS.map(({ title, description, image, github, tags }) => (
-    <article class="my-3 px-2">
+PROJECTS.map(({ title, description, image, github, link, tags }) => (
+    <article class="my-5 px-4">
       <h3 class="text-xl font-semibold text-blue-400/100 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-justify">{description}</p>
       <ul class="flex flex-wrap justify-center">
@@ -26,8 +33,16 @@ PROJECTS.map(({ title, description, image, github, tags }) => (
           ))
         }
       </ul>
-      <a class="text-blue-400/100 font-semibold hover:text-white" href={github} target="_blank"> ➡️  Mira el repo aqui!</a>
-      <img class="rounded mt-4 shadow-2xl shadow-white/10" src={image} alt=`Captura de pantalla ${image} `>
+      { github && 
+        <a class="text-blue-400/100 font-semibold hover:text-white" href={github} target="_blank"> ➡️  Mira el repo aqui!</a>
+      }
+      { link &&
+        <a class="text-blue-400/100 font-semibold hover:text-white" href={link} target="_blank"> ➡️  Mira de que trata aqui!</a>
+      }
+      { image &&
+        <img class="rounded mt-4 shadow-2xl shadow-white/10" src={image} alt=`Captura de pantalla ${image} `>
+      }
+      <hr class="mt-8">
     </article>
-  ))
+  )).reverse()
 }
