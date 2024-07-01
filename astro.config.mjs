@@ -8,5 +8,6 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
+  site: "https://eduardo732.github.io",
+  base: "portfolio",
 });
-
