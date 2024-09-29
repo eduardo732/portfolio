@@ -5,7 +5,6 @@ const PROJECTS = [
     description: "Proyecto realizado para comprender la potencia de una arquitectura hexagonal, con un desarrollo guiado por el dominio logrando así un software robusto y eficiente.",
     link: "",
     github: "https://github.com/eduardo732/cleanArquitecture",
-    image: "projects/cleanArquitecture.webp",
     tags: ["Java", "Springboot", "Arquitectura Limpia", "Patrones de diseño", "Código Limpio", "Eventos", "Pruebas unitarias"],
   },
   {
@@ -13,15 +12,20 @@ const PROJECTS = [
 description: "Encargado de la migración del módulo de Consultas al Mercado, por el lado del Backend.",
     link: "https://www.mercadopublico.cl/Home/Contenidos/QueEsConsultaMercado",
     github: "",
-    image: "projects/cam.webp",
     tags: ["Java", "Springboot", "Arquitectura Limpia", "Patrones de diseño", "Código Limpio", "Eventos", "Pruebas unitarias"] 
+  },
+  {
+    title: "Sistema automatizador de pruebas | Fábrica de Inovabiz",
+    description: "Sistema automatizador de pruebas para la fábrica de Inovabiz, encargado de probar la calidad de los proyectos antes de su despliegue.",
+    link: "",
+    github: "",
+    tags: ["Python", "Azure Functions", "Integración con OPENAI", "PlayWright"] 
   }
-  
 ];
 ---
 
 {
-PROJECTS.map(({ title, description, image, github, link, tags }) => (
+PROJECTS.map(({ title, description, github, link, tags }) => (
     <article class="my-5 px-4">
       <h3 class="text-xl font-semibold text-blue-400/100 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-justify">{description}</p>
@@ -38,9 +42,6 @@ PROJECTS.map(({ title, description, image, github, link, tags }) => (
       }
       { link &&
         <a class="text-blue-400/100 font-semibold hover:text-white" href={link} target="_blank"> ➡️  Mira de que trata aqui!</a>
-      }
-      { image &&
-        <img class="rounded mt-4 shadow-2xl shadow-white/10" src={image} alt=`Captura de pantalla ${image} `>
       }
       <hr class="mt-8">
     </article>

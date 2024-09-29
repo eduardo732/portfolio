@@ -2,10 +2,11 @@
 interface Props {
   id: number;
   date: string;
+  company: string;
   title: string;
   description: string;
 }
-const { id, date, title, description } = Astro.props;
+const { id, date, company, title, description } = Astro.props;
 ---
 
 <div
@@ -16,6 +17,7 @@ const { id, date, title, description } = Astro.props;
 <h3 class="text-lg font-semibold text-blue-400/100 dark:text-white mt-2">
   {title}
 </h3>
+<h4 class="text-lg font-semibold text-blue-500/100 dark:text-white mt-2">{company}</h4>
 <p class="mb-4 mr-4 text-base text-justify font-normal text-gray-300">
   {description}
 </p>

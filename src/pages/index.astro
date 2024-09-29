@@ -12,6 +12,7 @@ import InstagramIcon from "../icons/Instagram.astro";
 import BriefCaseIcon from "../icons/BriefCase.astro";
 import CodeIcon from "../icons/Code.astro";
 import MathGreaterIcon from "../icons/MathGreaterIcon.astro";
+import GmailIcon from "../icons/Gmail.astro";
 ---
 
 <Layout
@@ -29,9 +30,9 @@ import MathGreaterIcon from "../icons/MathGreaterIcon.astro";
         <span>+3 años de experiencia.</span>
         <span class="text-blue-400/100"
           >Desarrollador web enfocado en backend</span
-        >,
+        >.
         <span class="text-blue-200/90"
-          >especializado en crear aplicaciones robustas y eficientes.</span
+          >Creador de contenido tech!</span
         >
         <span class="opacity-75">Chile 🇨🇱.</span>
       </h2>
@@ -41,6 +42,10 @@ import MathGreaterIcon from "../icons/MathGreaterIcon.astro";
       <nav
         class="flex flex-col lg:flex-row justify-center items-center gap-x-2 mt-4 mx-4"
       >
+        <Bubble ref="mailto:eduardo.fuentes.reyes@gmail.com">
+          <GmailIcon class="size-6" />
+          Gmail
+        </Bubble>
         <Bubble ref="https://www.linkedin.com/in/eduardofuentesreyes/">
           <LinkedinIcon class="size-6" />
           LinkedIn
