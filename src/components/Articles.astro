@@ -1,0 +1,68 @@
+---
+interface Article {
+  title: string;
+  description: string;
+  url: string;
+  date: string;
+  tags: string[];
+}
+
+const articles: Article[] = [
+  {
+    title: "Caso real: cuando .populate() no es suficiente",
+    description:
+      "Aprende sobre los desafíos de integrar MongoDB con Oracle y las lecciones aprendidas en el proceso.",
+    url: "https://dev.to/eduuu_dev/caso-real-cuando-populate-no-es-suficiente-y-lo-que-aprendi-integrando-mongodb-con-oracle-1lbo",
+    date: "29 Mayo 2024",
+    tags: ["mongodb", "mongoose", "programming", "webdev"],
+  },
+  {
+    title: "¿Puede la IA reemplazar los trabajos de desarrollo?",
+    description:
+      "Un análisis profundo sobre el impacto de la IA en el desarrollo de software y el futuro de nuestra profesión.",
+    url: "https://dev.to/eduuu_dev/puede-la-ia-reemplazar-los-trabajos-de-desarrollo-vamos-a-hablar-de-ello-23fn",
+    date: "30 Diciembre 2024",
+    tags: ["webdev", "programming", "ai", "spanish"],
+  },
+  {
+    title: "Servidor NodeJs + Typescript + ExpressJs",
+    description:
+      "Guía completa para crear un servidor robusto con Node.js, TypeScript y Express.",
+    url: "https://dev.to/eduuu_dev/servidor-nodejs-typescript-expressjs-59jk",
+    date: "19 Marzo 2024",
+    tags: ["webdev", "node", "typescript", "backend"],
+  },
+];
+---
+
+<div class="grid gap-6 md:grid-cols-2">
+  {
+    articles.map((article) => (
+      <a
+        href={article.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-blue-500/50 transition-all duration-300"
+      >
+        <div class="space-y-3">
+          <div class="flex justify-between items-start">
+            <h3 class="text-base font-medium text-white group-hover:text-blue-400 transition-colors">
+              {article.title}
+            </h3>
+            <span class="text-xs text-gray-400">{article.date}</span>
+          </div>
+
+          <p class="text-gray-300 text-xs">{article.description}</p>
+
+          <div class="flex flex-wrap gap-1.5">
+            {article.tags.map((tag) => (
+              <span class="px-1.5 py-0.5 text-[10px] bg-blue-500/10 text-blue-400 rounded-full">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </a>
+    ))
+  }
+</div>
