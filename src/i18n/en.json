@@ -6,6 +6,10 @@
     "aboutMe": "About Me",
     "articles": "Articles"
   },
+  "footer": {
+    "home": "Home",
+    "aboutMe": "About Me"
+  },
   "hero": {
     "title": "Hi, I'm Eduardo",
     "subtitle": "Software Engineer.",
