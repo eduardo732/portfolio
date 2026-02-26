@@ -32,10 +32,34 @@ const articles: Article[] = [
     date: "19 Marzo 2024",
     tags: ["webdev", "node", "typescript", "backend"],
   },
+  {
+    title: "Código Limpio: Fechas (TimeZone)",
+    description:
+      "Explorando las mejores prácticas para manejar fechas y zonas horarias en el desarrollo de software.",
+    url: "https://dev.to/eduuu_dev/codigo-limpio-fechas-timezone-1nlp",
+    date: "15 Abril 2025",
+    tags: ["webdev", "programming", "timezone", "backend"],
+  },
+  {
+    title: "El principio de menor sorpresa y como el vibe coding puede romperlo",
+    description:
+      "Analizando el principio de menor sorpresa en el desarrollo de software y cómo el vibe coding puede afectar la experiencia del usuario.", 
+    url: "https://dev.to/eduuu_dev/el-principio-de-menor-sorpresa-y-como-el-vibe-coding-puede-romperlo-3nlj",
+    date: "19 Julio 2025",
+    tags: ["webdev", "programming", "vibe coding", "backend"],
+  },
+  {
+    title: "Implementación segura de CORS y validación de peticiones en arquitecturas de microservicios",
+    description:
+      "Una guía para implementar CORS de manera segura y validar peticiones en arquitecturas de microservicios, asegurando la integridad y seguridad de tus aplicaciones.",
+    url: "https://dev.to/eduuu_dev/implementacion-segura-de-cors-y-validacion-de-peticiones-en-arquitecturas-de-microservicios-2f5e",
+    date: "24 Octubre 2025",
+    tags: ["webdev", "programming", "cors", "microservices"],
+  }
 ];
 ---
 
-<div class="grid gap-6 md:grid-cols-2">
+<div class="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
   {
     articles.map((article) => (
       <a
@@ -49,7 +73,6 @@ const articles: Article[] = [
             <h3 class="text-base font-medium text-white group-hover:text-blue-400 transition-colors">
               {article.title}
             </h3>
-            <span class="text-xs text-gray-400">{article.date}</span>
           </div>
 
           <p class="text-gray-300 text-xs">{article.description}</p>

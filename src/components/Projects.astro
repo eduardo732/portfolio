@@ -1,49 +1,12 @@
 ---
-const PROJECTS = [
-  {
-    title: "Prueba de concepto | Desarrollo guiado por el dominio",
-    description: "Proyecto realizado para comprender la potencia de una arquitectura hexagonal, con un desarrollo guiado por el dominio logrando así un software robusto y eficiente.",
-    link: "",
-    github: "https://github.com/eduardo732/cleanArquitecture",
-    tags: ["Java", "Springboot", "Arquitectura Limpia", "Patrones de diseño", "Código Limpio", "Eventos", "Pruebas unitarias"],
-  },
-  {
-    title: "Migración de Consultas Al Mercado | Mercado Público",
-description: "Encargado de la migración del módulo de Consultas al Mercado, por el lado del Backend.",
-    link: "https://www.mercadopublico.cl/Home/Contenidos/QueEsConsultaMercado",
-    github: "",
-    tags: ["Java", "Springboot", "Arquitectura Limpia", "Patrones de diseño", "Código Limpio", "Eventos", "Pruebas unitarias"] 
-  },
-  {
-    title: "Sistema automatizador de pruebas | Fábrica de Inovabiz",
-    description: "Sistema automatizador de pruebas para la fábrica de Inovabiz, encargado de probar la calidad de los proyectos antes de su despliegue.",
-    link: "",
-    github: "",
-    tags: ["Python", "Azure Functions", "Integración con OPENAI", "PlayWright"] 
-  }
-];
+import Github from "../icons/Github.astro";
+import Bubble from "./Bubble.astro";
 ---
-
-{
-PROJECTS.map(({ title, description, github, link, tags }) => (
-    <article class="my-5 px-4">
-      <h3 class="text-xl font-semibold text-blue-400/100 mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-justify">{description}</p>
-      <ul class="flex flex-wrap justify-center">
-        {tags.map((tag) => (
-          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mx-2 mb-2 flex justify-center items-center">
-            <li class="w-80 text-xs rounded-3xl border border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 my-2 bg-white/5 hover:scale-110 transition">{tag}</li>
-          </div>
-          ))
-        }
-      </ul>
-      { github && 
-        <a class="text-blue-400/100 font-semibold hover:text-white" href={github} target="_blank"> ➡️  Mira el repo aqui!</a>
-      }
-      { link &&
-        <a class="text-blue-400/100 font-semibold hover:text-white" href={link} target="_blank"> ➡️  Mira de que trata aqui!</a>
-      }
-      <hr class="mt-8">
-    </article>
-  )).reverse()
-}
+<div class="flex flex-col gap-y-8">
+  <div class="flex justify-center">
+    <Bubble ref="https://github.com/eduardo732">
+      <Github class="size-6" />
+      Si tienes tiempo, revisa mi Github para ver más proyectos y contribuciones! 
+    </Bubble>
+  </div>
+</div>
