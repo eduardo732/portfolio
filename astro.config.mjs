@@ -9,7 +9,7 @@ export default defineConfig({
     enabled: false,
   },
   site: "https://eduardo732.github.io",
-  base: "portfolio",
+  base: "/portfolio",
   i18n: {
     defaultLocale: "es",
     locales: ["es", "en"],

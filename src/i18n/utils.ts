@@ -17,10 +17,16 @@ export function getLangFromUrl(url: URL) {
   const pathname = url.pathname;
   const segments = pathname.split('/').filter(Boolean);
   
-  // Si hay un base path (ej: portfolio), lo ignoramos
-  const possibleLang = segments[0] === 'portfolio' ? segments[1] : segments[0];
+  // Remover el base path si existe (ej: portfolio)
+  let pathSegments = segments;
+  if (segments[0] === 'portfolio') {
+    pathSegments = segments.slice(1);
+  }
   
+  // Verificar si el primer segmento restante es un idioma
+  const possibleLang = pathSegments[0];
   if (possibleLang in ui) return possibleLang as keyof typeof ui;
+  
   return defaultLang;
 }
 
