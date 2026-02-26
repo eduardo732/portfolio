@@ -1,42 +1,16 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCE = [
-  {
-    id: 1,
-    date: "Junio 2021 - Febrero 2022",
-    title: "Analista programador - Jefe de proyecto Mantenciones",
-    company: "AMS ASICOM",
-    description: `Desarrollo y soporte backend para clientes corporativos utilizando PHP (CodeIgniter, WordPress), Java y Go.`,
-  },
-  {
-    id: 2,
-    date: "Marzo 2022 - Junio 2022",
-    title: "Desarrollador Backend | Mercado Público",
-    company: "Quintess",
-    description: `Desarrollo y mantenimiento de microservicios con Java 8 y Spring Boot bajo arquitectura REST. Implementación de patrones de diseño (DAO, DTO, Inyección de Dependencias) para mejorar modularidad. Mejora de calidad de código y estabilidad del sistema.`,
-  },
-  {
-    id: 3,
-    date: "Agosto 2022 - Octubre 2025",
-    title: "Desarrollador Backend | Mercado Público | Fábrica | Ripley",
-    company: "Inovabiz",
-    description: `Diseño e implementación de microservicios backend utilizando Node.js (Express, NestJS) y Java (Spring Boot). Participación en migraciones y modernización de sistemas hacia arquitecturas desacopladas. Optimización de consultas y modelamiento de datos en PostgreSQL y MongoDB, mejorando tiempos de respuesta y estabilidad del sistema.`,
-  },
-  {
-    id: 4,
-    date: "Octubre 2025 - Actualidad",
-    title: "Desarrollador Backend | Mercado Público",
-    company: "TicmoAi",
-    description: `Desarrollo y mantenimiento de microservicios backend en entorno productivo de alta criticidad para Mercado Público / ChileCompra. Sincronización entre bases de datos transaccionales y réplicas en Amazon Aurora PostgreSQL, asegurando consistencia y rendimiento.
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
-Revisión y optimización de funciones serverless en AWS.`,
-  },
-];
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const EXPERIENCE = t('experience.jobs');
 ---
 
 <ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">
   {
-    EXPERIENCE.map((experience) => (
+    EXPERIENCE.map((experience: any) => (
       <li class="mb-10 ms-4">
         <ExperienceItem {...experience} />
       </li>

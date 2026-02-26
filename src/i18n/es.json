@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "projects": "GitHub",
+    "aboutMe": "Sobre mí",
+    "articles": "Artículos"
+  },
+  "hero": {
+    "title": "Hola, soy Eduardo",
+    "subtitle": "Ingeniero de Software.",
+    "description": "Especializado en diseño de sistemas escalables.",
+    "years": "+5 años creando soluciones enfocadas en el negocio.",
+    "location": "Chile 🇨🇱",
+    "contact": "Contáctame por cualquiera de estos canales!"
+  },
+  "about": {
+    "paragraph1": "Hola! mi nombre es Eduardo Fuentes, apasionado desarrollador de software con una sólida experiencia en tecnologías enfocadas en el desarrollo Back-End.",
+    "paragraph2": "Mi enfoque se centra en la eficiencia y las buenas prácticas. Creo en la importancia de un código limpio y bien documentado, y siempre busco formas de mejorar la arquitectura y el rendimiento de las aplicaciones.",
+    "paragraph3": "En mi tiempo libre exploro nuevas herramientas y frameworks. Fuera de la tecnología, me gusta pasar tiempo en la naturaleza y construir hábitos saludables. Si estás interesado en colaborar o simplemente quieres hablar sobre tecnología, no dudes en contactarme. Estoy siempre abierto a nuevas oportunidades y desafíos.",
+    "paragraph4": "Además, en mis tiempos libres hago contenido sobre tecnología.",
+    "imageAlt": "Imagen de edudev"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "jobs": [
+      {
+        "id": 1,
+        "date": "Junio 2021 - Febrero 2022",
+        "title": "Analista programador - Jefe de proyecto Mantenciones",
+        "company": "AMS ASICOM",
+        "description": "Desarrollo y soporte backend para clientes corporativos utilizando PHP (CodeIgniter, WordPress), Java y Go."
+      },
+      {
+        "id": 2,
+        "date": "Marzo 2022 - Junio 2022",
+        "title": "Desarrollador Backend | Mercado Público",
+        "company": "Quintess",
+        "description": "Desarrollo y mantenimiento de microservicios con Java 8 y Spring Boot bajo arquitectura REST. Implementación de patrones de diseño (DAO, DTO, Inyección de Dependencias) para mejorar modularidad. Mejora de calidad de código y estabilidad del sistema."
+      },
+      {
+        "id": 3,
+        "date": "Agosto 2022 - Octubre 2025",
+        "title": "Desarrollador Backend | Mercado Público | Fábrica | Ripley",
+        "company": "Inovabiz",
+        "description": "Diseño e implementación de microservicios backend utilizando Node.js (Express, NestJS) y Java (Spring Boot). Participación en migraciones y modernización de sistemas hacia arquitecturas desacopladas. Optimización de consultas y modelamiento de datos en PostgreSQL y MongoDB, mejorando tiempos de respuesta y estabilidad del sistema."
+      },
+      {
+        "id": 4,
+        "date": "Octubre 2025 - Actualidad",
+        "title": "Desarrollador Backend | Mercado Público",
+        "company": "TicmoAi",
+        "description": "Desarrollo y mantenimiento de microservicios backend en entorno productivo de alta criticidad para Mercado Público / ChileCompra. Sincronización entre bases de datos transaccionales y réplicas en Amazon Aurora PostgreSQL, asegurando consistencia y rendimiento.\n\nRevisión y optimización de funciones serverless en AWS."
+      }
+    ]
+  },
+  "projects": {
+    "githubLink": "Si tienes tiempo, revisa mi Github para ver más proyectos y contribuciones!"
+  },
+  "seo": {
+    "title": "Portafolio | Eduardo Fuentes Reyes Ingeniero de Software",
+    "description": "Eduardo Fuentes Reyes, desarrollador backend especializado en crear soluciones robustas y eficientes."
+  }
+}

@@ -1,0 +1,105 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Experience from "../../components/Experience.astro";
+import Bubble from "../../components/Bubble.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import Projects from "../../components/Projects.astro";
+import AboutMe from "../../components/AboutMe.astro";
+import Articles from "../../components/Articles.astro";
+import LinkedinIcon from "../../icons/Linkedin.astro";
+import InstagramIcon from "../../icons/Instagram.astro";
+import BriefCaseIcon from "../../icons/BriefCase.astro";
+import CodeIcon from "../../icons/Code.astro";
+import MathGreaterIcon from "../../icons/MathGreaterIcon.astro";
+import GmailIcon from "../../icons/Gmail.astro";
+import BookIcon from "../../icons/BookIcon.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout
+  title={t('seo.title')}
+  description={t('seo.description')}
+>
+  <main>
+    <SectionContainer id="top" className="items-center">
+      <h1
+        id="title-typed"
+        class="text-white text-xl sm:text-2xl lg:text-5xl flex justify-center flex-row gap-x-5 font-bold pb-5"
+      >
+      </h1>
+      <h2 class="max-w-[700px] text-justify lg:text-xl px-7">
+        <span>{t('hero.subtitle')}</span>
+        <span class="text-blue-400/100">{t('hero.description')}</span>
+        <span class="text-blue-200/90">{t('hero.years')}</span>
+      </h2>
+      <p class="max-w-[700px] mt-4 text-justify px-7">
+        {t('hero.location')}
+      </p>
+      <p class="max-w-[700px] mt-4 text-justify px-7">
+        {t('hero.contact')}
+      </p>
+      <nav
+        class="flex flex-col lg:flex-row justify-center items-center gap-x-2 mt-4 mx-4"
+      >
+        <Bubble ref="mailto:eduardo.fuentes.reyes@gmail.com">
+          <GmailIcon class="size-6" />
+          Gmail
+        </Bubble>
+        <Bubble ref="https://www.linkedin.com/in/eduardofuentesreyes/">
+          <LinkedinIcon class="size-6" />
+          LinkedIn
+        </Bubble>
+        <Bubble ref="https://www.instagram.com/eduuu.dev/">
+          <InstagramIcon class="size-6" />
+          Instagram
+        </Bubble>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold my-8 ml-1 flex gap-x-2 items-center">
+        <BriefCaseIcon class="size-8" />
+        {t('nav.experience')}
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="articulos">
+      <h2 class="text-2xl font-semibold mb-8 flex gap-x-2 items-center">
+        <BookIcon class="size-8" />
+        {t('nav.articles')}
+      </h2>
+      <Articles />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-4 flex gap-x-2 items-center">
+        <CodeIcon class="size-8" />
+        GitHub
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-2xl font-semibold mb-4 flex gap-x-2 items-center">
+        <MathGreaterIcon class="size-8" />
+        {t('nav.aboutMe')}
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </main>
+</Layout>
+
+<script>
+  import Typed from "typed.js";
+  const lang = window.location.pathname.includes('/en') ? 'en' : 'es';
+  const greetings = {
+    es: "Hola! soy Eduardo Fuentes.",
+    en: "Hi! I'm Eduardo Fuentes."
+  };
+  
+  new Typed("#title-typed", {
+    strings: [greetings[lang]],
+    typeSpeed: 70,
+    showCursor: false,
+  });
+</script>

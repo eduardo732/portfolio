@@ -13,11 +13,15 @@ import CodeIcon from "../icons/Code.astro";
 import MathGreaterIcon from "../icons/MathGreaterIcon.astro";
 import GmailIcon from "../icons/Gmail.astro";
 import BookIcon from "../icons/BookIcon.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout
-  title="Portafolio | Eduardo Fuentes Reyes Ingeniero de Software"
-  description="Eduardo Fuentes Reyes, desarrollador backend especializado en crear soluciones robustas y eficientes."
+  title={t('seo.title')}
+  description={t('seo.description')}
 >
   <main>
     <SectionContainer id="top" className="items-center">
@@ -27,17 +31,15 @@ import BookIcon from "../icons/BookIcon.astro";
       >
       </h1>
       <h2 class="max-w-[700px] text-justify lg:text-xl px-7">
-        <span>Ingeniero de Software.</span>
-        <span class="text-blue-400/100"
-          >Especializado en diseño de sistemas escalables.</span
-        >
-        <span class="text-blue-200/90">+5 años creando soluciones enfocadas en el negocio. </span>
+        <span>{t('hero.subtitle')}</span>
+        <span class="text-blue-400/100">{t('hero.description')}</span>
+        <span class="text-blue-200/90">{t('hero.years')}</span>
       </h2>
       <p class="max-w-[700px] mt-4 text-justify px-7">
-        Chile 🇨🇱
+        {t('hero.location')}
       </p>
       <p class="max-w-[700px] mt-4 text-justify px-7">
-        Contáctame por cualquiera de estos canales!
+        {t('hero.contact')}
       </p>
       <nav
         class="flex flex-col lg:flex-row justify-center items-center gap-x-2 mt-4 mx-4"
@@ -59,14 +61,14 @@ import BookIcon from "../icons/BookIcon.astro";
     <SectionContainer id="experiencia">
       <h2 class="text-2xl font-semibold my-8 ml-1 flex gap-x-2 items-center">
         <BriefCaseIcon class="size-8" />
-        Experiencia Laboral
+        {t('nav.experience')}
       </h2>
       <Experience />
     </SectionContainer>
     <SectionContainer id="articulos">
       <h2 class="text-2xl font-semibold mb-8 flex gap-x-2 items-center">
         <BookIcon class="size-8" />
-        Articulos
+        {t('nav.articles')}
       </h2>
       <Articles />
     </SectionContainer>
@@ -80,7 +82,7 @@ import BookIcon from "../icons/BookIcon.astro";
     <SectionContainer id="sobre-mi">
       <h2 class="text-2xl font-semibold mb-4 flex gap-x-2 items-center">
         <MathGreaterIcon class="size-8" />
-        Sobre mi
+        {t('nav.aboutMe')}
       </h2>
       <AboutMe />
     </SectionContainer>
@@ -89,8 +91,14 @@ import BookIcon from "../icons/BookIcon.astro";
 
 <script>
   import Typed from "typed.js";
+  const lang = window.location.pathname.includes('/en') ? 'en' : 'es';
+  const greetings = {
+    es: "Hola! soy Eduardo Fuentes.",
+    en: "Hi! I'm Eduardo Fuentes."
+  };
+  
   new Typed("#title-typed", {
-    strings: ["Hola! soy Eduardo Fuentes."],
+    strings: [greetings[lang]],
     typeSpeed: 70,
     showCursor: false,
   });

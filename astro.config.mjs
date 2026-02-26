@@ -10,4 +10,11 @@ export default defineConfig({
   },
   site: "https://eduardo732.github.io",
   base: "portfolio",
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  }
 });

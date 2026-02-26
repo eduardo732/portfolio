@@ -1,26 +1,27 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const base = import.meta.env.BASE_URL;
+---
+
 <article class="flex flex-col justify-center items-center my-6 px-4">
   <p class="text-justify mb-2">
-    Hola! mi nombre es Eduardo Fuentes, apasionado desarrollador de software con
-    una sólida experiencia en tecnologías enfocadas en el desarrollo Back-End.
+    {t('about.paragraph1')}
   </p>
   <p class="text-justify mb-2">
-    Mi enfoque se centra en la eficiencia y las buenas prácticas. Creo en la
-    importancia de un código limpio y bien documentado, y siempre busco formas
-    de mejorar la arquitectura y el rendimiento de las aplicaciones.
+    {t('about.paragraph2')}
   </p>
   <p class="text-justify mb-2">
-    En mi tiempo libre exploro nuevas herramientas y frameworks. Fuera de la
-    tecnología, me gusta pasar tiempo en la naturaleza y construir hábitos
-    saludables. Si estás interesado en colaborar o simplemente quieres hablar
-    sobre tecnología, no dudes en contactarme. Estoy siempre abierto a nuevas
-    oportunidades y desafíos.
+    {t('about.paragraph3')}
   </p>
   <p class="text-justify mb-2">
-    Además, en mis tiempos libres hago contenido sobre tecnología.
+    {t('about.paragraph4')}
   </p>
   <img
     class="rounded object-cover shadow-2xl shadow-white/30 size-72 mt-8"
-    src="me.webp"
-    alt="Imagen de edudev"
+    src={`${base}me.webp`}
+    alt={t('about.imageAlt')}
   />
 </article>

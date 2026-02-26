@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "projects": "GitHub",
+    "aboutMe": "About Me",
+    "articles": "Articles"
+  },
+  "hero": {
+    "title": "Hi, I'm Eduardo",
+    "subtitle": "Software Engineer.",
+    "description": "Specialized in scalable system design.",
+    "years": "+5 years creating business-focused solutions.",
+    "location": "Chile 🇨🇱",
+    "contact": "Contact me through any of these channels!"
+  },
+  "about": {
+    "paragraph1": "Hello! My name is Eduardo Fuentes, a passionate software developer with solid experience in Back-End development technologies.",
+    "paragraph2": "My focus is on efficiency and best practices. I believe in the importance of clean and well-documented code, and I always look for ways to improve the architecture and performance of applications.",
+    "paragraph3": "In my free time, I explore new tools and frameworks. Outside of technology, I enjoy spending time in nature and building healthy habits. If you're interested in collaborating or just want to talk about technology, don't hesitate to contact me. I'm always open to new opportunities and challenges.",
+    "paragraph4": "Additionally, in my free time, I create content about technology.",
+    "imageAlt": "Image of edudev"
+  },
+  "experience": {
+    "title": "Experience",
+    "jobs": [
+      {
+        "id": 1,
+        "date": "June 2021 - February 2022",
+        "title": "Programmer Analyst - Project Manager Maintenance",
+        "company": "AMS ASICOM",
+        "description": "Backend development and support for corporate clients using PHP (CodeIgniter, WordPress), Java, and Go."
+      },
+      {
+        "id": 2,
+        "date": "March 2022 - June 2022",
+        "title": "Backend Developer | Public Market",
+        "company": "Quintess",
+        "description": "Development and maintenance of microservices with Java 8 and Spring Boot under REST architecture. Implementation of design patterns (DAO, DTO, Dependency Injection) to improve modularity. Improvement of code quality and system stability."
+      },
+      {
+        "id": 3,
+        "date": "August 2022 - October 2025",
+        "title": "Backend Developer | Public Market | Factory | Ripley",
+        "company": "Inovabiz",
+        "description": "Design and implementation of backend microservices using Node.js (Express, NestJS) and Java (Spring Boot). Participation in migrations and modernization of systems towards decoupled architectures. Optimization of queries and data modeling in PostgreSQL and MongoDB, improving response times and system stability."
+      },
+      {
+        "id": 4,
+        "date": "October 2025 - Present",
+        "title": "Backend Developer | Public Market",
+        "company": "TicmoAi",
+        "description": "Development and maintenance of backend microservices in high-criticality production environment for Public Market / ChileCompra. Synchronization between transactional databases and replicas in Amazon Aurora PostgreSQL, ensuring consistency and performance.\n\nReview and optimization of serverless functions in AWS."
+      }
+    ]
+  },
+  "projects": {
+    "githubLink": "If you have time, check out my Github to see more projects and contributions!"
+  },
+  "seo": {
+    "title": "Portfolio | Eduardo Fuentes Reyes Software Engineer",
+    "description": "Eduardo Fuentes Reyes, backend developer specialized in creating robust and efficient solutions."
+  }
+}

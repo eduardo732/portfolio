@@ -1,12 +1,16 @@
 ---
 import Github from "../icons/Github.astro";
 import Bubble from "./Bubble.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <div class="flex flex-col gap-y-8">
   <div class="flex justify-center">
     <Bubble ref="https://github.com/eduardo732">
       <Github class="size-6" />
-      Si tienes tiempo, revisa mi Github para ver más proyectos y contribuciones! 
+      {t('projects.githubLink')}
     </Bubble>
   </div>
 </div>
