@@ -3,7 +3,10 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+// Normalizar base: siempre empieza con / y termina con /
+let base = import.meta.env.BASE_URL || '/';
+if (!base.startsWith('/')) base = '/' + base;
+if (!base.endsWith('/')) base = base + '/';
 ---
 
 <article class="flex flex-col justify-center items-center my-6 px-4">

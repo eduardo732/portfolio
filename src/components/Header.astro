@@ -11,7 +11,10 @@ import {
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const currentPath = Astro.url.pathname;
-const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+// Normalizar base: siempre empieza con / y termina con /
+let base = import.meta.env.BASE_URL || '/';
+if (!base.startsWith('/')) base = '/' + base;
+if (!base.endsWith('/')) base = base + '/';
 
 const LINKS = [
   { name: t("nav.home"), ref: "#top" },

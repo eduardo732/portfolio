@@ -63,20 +63,33 @@ export function translatePath(path: string, lang: keyof typeof ui, base: string 
   return `${cleanBase}/${lang}${path}`;
 }
 
-export function getLocalizedPath(currentPath: string, targetLang: keyof typeof ui, base: string = '') {
-  const cleanBase = base.replace(/\/$/, '');
-  const pathWithoutBase = currentPath.replace(cleanBase, '');
+export function getLocalizedPath(currentPath: string, targetLang: keyof typeof ui, base: string = '/') {
+  // Normalizar base
+  let cleanBase = base || '/';
+  if (!cleanBase.startsWith('/')) cleanBase = '/' + cleanBase;
+  cleanBase = cleanBase.replace(/\/$/, ''); // Quitar trailing slash
+  
+  // Quitar el base del path actual
+  let pathWithoutBase = currentPath;
+  if (cleanBase !== '' && currentPath.startsWith(cleanBase)) {
+    pathWithoutBase = currentPath.substring(cleanBase.length);
+  }
+  if (!pathWithoutBase.startsWith('/')) pathWithoutBase = '/' + pathWithoutBase;
+  
   const segments = pathWithoutBase.split('/').filter(Boolean);
   
   // Remover el idioma actual si existe
   const currentLang = segments[0] in ui ? segments[0] : null;
-  const pathWithoutLang = currentLang ? '/' + segments.slice(1).join('/') : pathWithoutBase;
+  const pathSegments = currentLang ? segments.slice(1) : segments;
+  const pathWithoutLang = '/' + pathSegments.join('/');
   
-  // Si el idioma objetivo es el default, no agregamos prefijo
+  // Si el idioma objetivo es el default, no agregamos prefijo de idioma
   if (targetLang === defaultLang) {
-    return `${cleanBase}${pathWithoutLang || '/'}`;
+    const finalPath = cleanBase + pathWithoutLang;
+    return finalPath === '' ? '/' : finalPath;
   }
   
   // Agregar el idioma objetivo
-  return `${cleanBase}/${targetLang}${pathWithoutLang || ''}`;
+  const finalPath = `${cleanBase}/${targetLang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`;
+  return finalPath;
 }
