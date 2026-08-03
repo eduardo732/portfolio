@@ -13,16 +13,16 @@
   "hero": {
     "title": "Hi, I'm Eduardo",
     "subtitle": "Software Engineer.",
-    "description": "Specialized in scalable system design.",
+    "description": "Full-stack, specialized in backend applications for high-availability production systems.",
     "years": "+5 years creating business-focused solutions.",
     "location": "Chile 🇨🇱",
     "contact": "Contact me through any of these channels!"
   },
   "about": {
-    "paragraph1": "Hello! My name is Eduardo Fuentes, a passionate software developer with solid experience in Back-End development technologies.",
-    "paragraph2": "My focus is on efficiency and best practices. I believe in the importance of clean and well-documented code, and I always look for ways to improve the architecture and performance of applications.",
-    "paragraph3": "In my free time, I explore new tools and frameworks. Outside of technology, I enjoy spending time in nature and building healthy habits. If you're interested in collaborating or just want to talk about technology, don't hesitate to contact me. I'm always open to new opportunities and challenges.",
-    "paragraph4": "Additionally, in my free time, I create content about technology.",
+    "paragraph1": "Hi! My name is Eduardo Fuentes, a Software Engineer with over 5 years of experience designing and developing backend applications for mission-critical systems, working on platform modernization, migration, and integration projects in high-availability environments.",
+    "paragraph2": "My main focus is backend development with Java (Spring Boot) and Node.js (Express and NestJS), applying principles such as SOLID, Clean Architecture, domain-driven design, and solid testing practices to build maintainable and scalable software. Although my specialty is backend, I also have experience building interfaces with React, which lets me collaborate across the full stack and communicate effectively with frontend teams.",
+    "paragraph3": "Throughout my career I've increased the availability and resilience of a critical ChileCompra service through a migration to a decoupled architecture, contributed to a Fast Checkout solution for Ripley, and optimized queries and indexes in databases, significantly reducing response times for critical processes.",
+    "paragraph4": "In my free time I explore new tools and frameworks, and I also create content about technology. My goal is to keep growing into roles where I can contribute not only by writing code but also by designing scalable systems, making architecture decisions, and building products with real impact. If you're interested in collaborating or just want to talk about technology, feel free to reach out.",
     "imageAlt": "Image of edudev"
   },
   "experience": {
@@ -30,31 +30,38 @@
     "jobs": [
       {
         "id": 1,
-        "date": "June 2021 - February 2022",
-        "title": "Programmer Analyst - Project Manager Maintenance",
-        "company": "AMS ASICOM",
-        "description": "Backend development and support for corporate clients using PHP (CodeIgniter, WordPress), Java, and Go."
+        "date": "January 2020 - February 2020",
+        "title": "Web Developer",
+        "company": "Anticipa S.A.",
+        "description": "Maintenance and development of new features on an institutional web platform (SENCE) using .NET. Bug fixes and improvements to existing modules."
       },
       {
         "id": 2,
-        "date": "March 2022 - June 2022",
-        "title": "Backend Developer | Public Market",
-        "company": "Quintess",
-        "description": "Development and maintenance of microservices with Java 8 and Spring Boot under REST architecture. Implementation of design patterns (DAO, DTO, Dependency Injection) to improve modularity. Improvement of code quality and system stability."
+        "date": "June 2021 - February 2022",
+        "title": "Programming Analyst",
+        "company": "AMS Asicom Mobile Solutions",
+        "description": "Backend development and support for corporate clients using PHP (CodeIgniter, WordPress), Java, and Go. Service optimization and system integration. Configuration and administration of Linux and VPN environments to ensure security and operational continuity. Coordination of maintenance windows and production deployments."
       },
       {
         "id": 3,
-        "date": "August 2022 - October 2025",
-        "title": "Backend Developer | Public Market | Factory | Ripley",
-        "company": "Inovabiz",
-        "description": "Design and implementation of backend microservices using Node.js (Express, NestJS) and Java (Spring Boot). Participation in migrations and modernization of systems towards decoupled architectures. Optimization of queries and data modeling in PostgreSQL and MongoDB, improving response times and system stability."
+        "date": "March 2022 - July 2022",
+        "title": "Backend Developer | Public Market",
+        "company": "Qintess",
+        "description": "Development and maintenance of microservices with Java 8 and Spring Boot under REST architecture. Implementation of design patterns (DAO, DTO, Dependency Injection) to improve modularity. Improvement of code quality and system stability. Work with GitFlow and Scrum methodology."
       },
       {
         "id": 4,
+        "date": "August 2022 - September 2025",
+        "title": "Software Engineer | Public Market | Factory | Ripley",
+        "company": "InovaBiz",
+        "description": "Design and implementation of backend microservices using Node.js (Express, NestJS) and Java (Spring Boot). Development and consumption of RESTful APIs for integration with internal and external systems. Participation in migrations and modernization of systems towards decoupled architectures. Optimization of queries and data modeling in PostgreSQL and MongoDB. Automated testing with Jest and JUnit under a TDD approach, applying SOLID principles and Clean Architecture.\n\nKey projects: Ripley (creation and migration of microservices for a new digital product), Innovación-Fábrica (end-to-end testing system focused on automation and prompt engineering), ChileCompra - Consultas al Mercado (migration of a critical module) and Registro de Proveedores (optimization and bug fixing in a critical public-sector system)."
+      },
+      {
+        "id": 5,
         "date": "October 2025 - Present",
-        "title": "Backend Developer | Public Market",
-        "company": "TicmoAi",
-        "description": "Development and maintenance of backend microservices in high-criticality production environment for Public Market / ChileCompra. Synchronization between transactional databases and replicas in Amazon Aurora PostgreSQL, ensuring consistency and performance.\n\nReview and optimization of serverless functions in AWS."
+        "title": "Software Engineer | Public Market",
+        "company": "TicMoAI",
+        "description": "Development and maintenance of backend microservices in a high-criticality production environment for Public Market / ChileCompra, built with Spring Boot under a modular architecture. Synchronization between transactional databases and replicas in Amazon Aurora PostgreSQL, ensuring consistency and performance. Review and optimization of serverless functions in AWS. Resolution of critical incidents and continuous improvement of technical standards and documentation."
       }
     ]
   },
