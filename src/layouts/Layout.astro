@@ -28,11 +28,8 @@ if (!base.endsWith('/')) base = base + '/';
     <title>{title}</title>
   </head>
   <body>
-    <div class="relative left-0 top-0 h-full w-full">
-      <div
-        class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
-      >
-      </div>
+    <div class="relative left-0 top-0 h-full w-full text-slate-100">
+      <div class="blueprint-grid fixed inset-0 -z-10 h-full w-full"></div>
       <Header />
       <slot />
       <Footer />
@@ -54,6 +51,39 @@ if (!base.endsWith('/')) base = base + '/';
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #0a0f1e;
+  }
+  .blueprint-grid {
+    background-color: #0a0f1e;
+    background-image:
+      repeating-linear-gradient(
+        to right,
+        rgba(34, 211, 238, 0.12) 0,
+        rgba(34, 211, 238, 0.12) 1px,
+        transparent 1px,
+        transparent 160px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        rgba(34, 211, 238, 0.12) 0,
+        rgba(34, 211, 238, 0.12) 1px,
+        transparent 1px,
+        transparent 160px
+      ),
+      repeating-linear-gradient(
+        to right,
+        rgba(34, 211, 238, 0.06) 0,
+        rgba(34, 211, 238, 0.06) 1px,
+        transparent 1px,
+        transparent 32px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        rgba(34, 211, 238, 0.06) 0,
+        rgba(34, 211, 238, 0.06) 1px,
+        transparent 1px,
+        transparent 32px
+      );
   }
   @media (prefers-reduced-motion: reduce) {
     html {

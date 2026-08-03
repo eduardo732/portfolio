@@ -7,24 +7,37 @@ const t = useTranslations(lang);
 let base = import.meta.env.BASE_URL || '/';
 if (!base.startsWith('/')) base = '/' + base;
 if (!base.endsWith('/')) base = base + '/';
+
+const SECTIONS = t('about.sections');
 ---
 
-<article class="flex flex-col justify-center items-center my-6 px-4">
-  <p class="text-justify mb-2">
-    {t('about.paragraph1')}
-  </p>
-  <p class="text-justify mb-2">
-    {t('about.paragraph2')}
-  </p>
-  <p class="text-justify mb-2">
-    {t('about.paragraph3')}
-  </p>
-  <p class="text-justify mb-2">
-    {t('about.paragraph4')}
-  </p>
-  <img
-    class="rounded object-cover shadow-2xl shadow-white/30 size-72 mt-8"
-    src={`${base}me.webp`}
-    alt={t('about.imageAlt')}
-  />
+<article class="my-6 px-4">
+  <div class="flex flex-col gap-8 md:grid md:grid-cols-[220px_1fr] md:items-start">
+    <div class="relative mx-auto size-56 shrink-0 md:sticky md:top-24">
+      <img
+        class="size-full rounded object-cover border border-blueprint-accent/40"
+        src={`${base}me.webp`}
+        alt={t('about.imageAlt')}
+      />
+      <span class="absolute -left-1.5 -top-1.5 size-4 border-l-2 border-t-2 border-blueprint-accent"></span>
+      <span class="absolute -right-1.5 -top-1.5 size-4 border-r-2 border-t-2 border-blueprint-accent"></span>
+      <span class="absolute -bottom-1.5 -left-1.5 size-4 border-b-2 border-l-2 border-blueprint-accent"></span>
+      <span class="absolute -bottom-1.5 -right-1.5 size-4 border-b-2 border-r-2 border-blueprint-accent"></span>
+    </div>
+
+    <div class="flex flex-col divide-y divide-blueprint-line/60">
+      {
+        SECTIONS.map((section: { label: string; text: string }, i: number) => (
+          <div class={i === 0 ? "pb-6" : "py-6"}>
+            <span class="font-mono text-xs uppercase tracking-widest text-blueprint-accent">
+              // {section.label}
+            </span>
+            <p class="mt-2 text-sm text-slate-300 md:text-base">
+              {section.text}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </article>

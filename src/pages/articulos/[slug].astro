@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articulos');
+  return articles.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+let base = import.meta.env.BASE_URL || '/';
+if (!base.startsWith('/')) base = '/' + base;
+if (!base.endsWith('/')) base = base + '/';
+
+const formattedDate = entry.data.date.toLocaleDateString('es-CL', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+});
+---
+
+<Layout title={`${entry.data.title} | Eduardo Fuentes`} description={entry.data.description}>
+  <main>
+    <div class="mx-auto w-full px-4 py-16 lg:w-[750px]">
+      <a
+        href={`${base}#articulos`}
+        class="font-mono text-xs uppercase tracking-widest text-blueprint-accent hover:underline"
+      >
+        {t('articleDetail.backToArticles')}
+      </a>
+
+      <div class="mt-6 font-mono text-xs uppercase tracking-widest text-slate-400">
+        {formattedDate}
+      </div>
+      <h1 class="mt-2 text-2xl font-bold text-slate-100 sm:text-3xl">
+        {entry.data.title}
+      </h1>
+
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        {
+          entry.data.tags.map((tag: string) => (
+            <span class="rounded-full bg-blueprint-accent/10 px-1.5 py-0.5 text-[10px] text-blueprint-accent">
+              #{tag}
+            </span>
+          ))
+        }
+      </div>
+
+      <article class="prose prose-invert mt-8 max-w-none">
+        <Content />
+      </article>
+
+      <div class="mt-10 border-t border-blueprint-line pt-6">
+        <a
+          href={entry.data.devToUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-mono text-xs uppercase tracking-widest text-blueprint-accent hover:underline"
+        >
+          {t('articleDetail.publishedOn')} ↗
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>

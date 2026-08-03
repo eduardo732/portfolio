@@ -2,13 +2,9 @@
   "nav": {
     "home": "Home",
     "experience": "Experience",
-    "projects": "GitHub",
+    "projects": "Projects",
     "aboutMe": "About Me",
     "articles": "Articles"
-  },
-  "footer": {
-    "home": "Home",
-    "aboutMe": "About Me"
   },
   "hero": {
     "title": "Hi, I'm Eduardo",
@@ -19,54 +15,115 @@
     "contact": "Contact me through any of these channels!"
   },
   "about": {
-    "paragraph1": "Hi! My name is Eduardo Fuentes, a Software Engineer with over 5 years of experience designing and developing backend applications for mission-critical systems, working on platform modernization, migration, and integration projects in high-availability environments.",
-    "paragraph2": "My main focus is backend development with Java (Spring Boot) and Node.js (Express and NestJS), applying principles such as SOLID, Clean Architecture, domain-driven design, and solid testing practices to build maintainable and scalable software. Although my specialty is backend, I also have experience building interfaces with React, which lets me collaborate across the full stack and communicate effectively with frontend teams.",
-    "paragraph3": "Throughout my career I've increased the availability and resilience of a critical ChileCompra service through a migration to a decoupled architecture, contributed to a Fast Checkout solution for Ripley, and optimized queries and indexes in databases, significantly reducing response times for critical processes.",
-    "paragraph4": "In my free time I explore new tools and frameworks, and I also create content about technology. My goal is to keep growing into roles where I can contribute not only by writing code but also by designing scalable systems, making architecture decisions, and building products with real impact. If you're interested in collaborating or just want to talk about technology, feel free to reach out.",
+    "sections": [
+      {
+        "label": "Profile",
+        "text": "Hi! My name is Eduardo Fuentes, a Software Engineer with over 5 years of experience designing and developing backend applications for mission-critical systems, working on platform modernization, migration, and integration projects in high-availability environments."
+      },
+      {
+        "label": "Stack",
+        "text": "My main focus is backend development with Java (Spring Boot) and Node.js (Express and NestJS), applying principles such as SOLID, Clean Architecture, domain-driven design, and solid testing practices to build maintainable and scalable software. Although my specialty is backend, I also have experience building interfaces with React, which lets me collaborate across the full stack and communicate effectively with frontend teams."
+      },
+      {
+        "label": "Achievements",
+        "text": "The most relevant milestones of my career — the decoupled-architecture migration of a critical ChileCompra service, Fast Checkout for Ripley, and the query optimization that cut response times — are detailed role-by-role in the Experience section."
+      },
+      {
+        "label": "Goal",
+        "text": "In my free time I explore new tools and frameworks, and I also create content about technology. My goal is to keep growing into roles where I can contribute not only by writing code but also by designing scalable systems, making architecture decisions, and building products with real impact. If you're interested in collaborating or just want to talk about technology, feel free to reach out."
+      }
+    ],
     "imageAlt": "Image of edudev"
   },
   "experience": {
     "title": "Experience",
+    "stats": {
+      "roles": "roles",
+      "since": "first role",
+      "years": "years of experience"
+    },
     "jobs": [
       {
         "id": 1,
         "date": "January 2020 - February 2020",
         "title": "Web Developer",
         "company": "Anticipa S.A.",
-        "description": "Maintenance and development of new features on an institutional web platform (SENCE) using .NET. Bug fixes and improvements to existing modules."
+        "description": [
+          "Maintained and extended the SENCE institutional web platform in .NET, adding new features without disrupting production.",
+          "Fixed bugs and improved the stability of existing modules for end users."
+        ]
       },
       {
         "id": 2,
         "date": "June 2021 - February 2022",
         "title": "Programming Analyst",
         "company": "AMS Asicom Mobile Solutions",
-        "description": "Backend development and support for corporate clients using PHP (CodeIgniter, WordPress), Java, and Go. Service optimization and system integration. Configuration and administration of Linux and VPN environments to ensure security and operational continuity. Coordination of maintenance windows and production deployments."
+        "description": [
+          "Developed and supported backend services for corporate clients using PHP (CodeIgniter, WordPress), Java, and Go.",
+          "Improved integration between systems, streamlining communication across internal and external services.",
+          "Configured and administered Linux environments and VPNs, ensuring security and operational continuity.",
+          "Coordinated maintenance windows and production deployments, ensuring service continuity."
+        ]
       },
       {
         "id": 3,
         "date": "March 2022 - July 2022",
         "title": "Backend Developer | Public Market",
         "company": "Qintess",
-        "description": "Development and maintenance of microservices with Java 8 and Spring Boot under REST architecture. Implementation of design patterns (DAO, DTO, Dependency Injection) to improve modularity. Improvement of code quality and system stability. Work with GitFlow and Scrum methodology."
+        "description": [
+          "Built and maintained REST microservices with Java 8 and Spring Boot for Public Market.",
+          "Applied design patterns (DAO, DTO, Dependency Injection) that improved code modularity and maintainability.",
+          "Raised code quality and system stability working under GitFlow and Scrum."
+        ]
       },
       {
         "id": 4,
         "date": "August 2022 - September 2025",
         "title": "Software Engineer | Public Market | Factory | Ripley",
         "company": "InovaBiz",
-        "description": "Design and implementation of backend microservices using Node.js (Express, NestJS) and Java (Spring Boot). Development and consumption of RESTful APIs for integration with internal and external systems. Participation in migrations and modernization of systems towards decoupled architectures. Optimization of queries and data modeling in PostgreSQL and MongoDB. Automated testing with Jest and JUnit under a TDD approach, applying SOLID principles and Clean Architecture.\n\nKey projects: Ripley (creation and migration of microservices for a new digital product), Innovación-Fábrica (end-to-end testing system focused on automation and prompt engineering), ChileCompra - Consultas al Mercado (migration of a critical module) and Registro de Proveedores (optimization and bug fixing in a critical public-sector system)."
+        "description": [
+          "Led the migration of a critical ChileCompra service (Consultas al Mercado) to a decoupled architecture, increasing its availability and resilience in production.",
+          "Contributed to Fast Checkout for Ripley, designing backend microservices with Node.js (Express, NestJS) and Java (Spring Boot).",
+          "Optimized queries and indexes in PostgreSQL and MongoDB, significantly reducing response times for critical processes.",
+          "Implemented automated testing (Jest, JUnit) under TDD and applied SOLID/Clean Architecture on Innovación-Fábrica (end-to-end testing system) and Registro de Proveedores.",
+          "Worked with distributed systems communicating via Kafka, decoupling processing between services.",
+          "Developed full-stack features and maintenance with React, Spring Boot, and SQL Server."
+        ]
       },
       {
         "id": 5,
         "date": "October 2025 - Present",
         "title": "Software Engineer | Public Market",
         "company": "TicMoAI",
-        "description": "Development and maintenance of backend microservices in a high-criticality production environment for Public Market / ChileCompra, built with Spring Boot under a modular architecture. Synchronization between transactional databases and replicas in Amazon Aurora PostgreSQL, ensuring consistency and performance. Review and optimization of serverless functions in AWS. Resolution of critical incidents and continuous improvement of technical standards and documentation."
+        "description": [
+          "Develop and maintain backend microservices in a high-criticality production environment for Public Market / ChileCompra, with Spring Boot.",
+          "Synchronize transactional databases with replicas on Amazon Aurora PostgreSQL, ensuring consistency and performance.",
+          "Review and optimize serverless functions on AWS, resolving critical incidents and improving technical standards and documentation.",
+          "Work with distributed systems communicating via Kafka to decouple processing between services.",
+          "Develop full-stack features and maintenance with React, Spring Boot, and SQL Server."
+        ]
       }
     ]
   },
   "projects": {
-    "githubLink": "If you have time, check out my Github to see more projects and contributions!"
+    "githubLink": "If you have time, check out my Github to see more projects and contributions!",
+    "featuredLabel": "Featured project",
+    "featured": {
+      "title": "FinanceHub — From no-code to production",
+      "description": "Full migration of a personal finance platform from a no-code tool (Base44) to an in-house stack, following a spec-driven development discipline: API contract and database schema fixed before writing code, with every task verified against a real running system (never just green tests). Deployed to production on Cloud Run with real CI/CD via GitHub Actions.",
+      "metrics": [
+        { "value": "80", "label": "REST endpoints" },
+        { "value": "177", "label": "passing tests" },
+        { "value": "20", "label": "tables with RLS" },
+        { "value": "0", "label": "long-lived keys (Workload Identity Federation)" }
+      ],
+      "stack": ["React", "Vite", "Spring Boot", "PostgreSQL / Supabase", "GitHub Actions", "Google Cloud Run"],
+      "status": "Private repository — link coming soon"
+    }
+  },
+  "articleDetail": {
+    "backToArticles": "← Back to articles",
+    "publishedOn": "Originally published on dev.to"
   },
   "seo": {
     "title": "Portfolio | Eduardo Fuentes Reyes Software Engineer",

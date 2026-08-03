@@ -2,13 +2,9 @@
   "nav": {
     "home": "Inicio",
     "experience": "Experiencia",
-    "projects": "GitHub",
+    "projects": "Proyectos",
     "aboutMe": "Sobre mí",
     "articles": "Artículos"
-  },
-  "footer": {
-    "home": "Inicio",
-    "aboutMe": "Sobre mí"
   },
   "hero": {
     "title": "Hola, soy Eduardo",
@@ -19,54 +15,115 @@
     "contact": "Contáctame por cualquiera de estos canales!"
   },
   "about": {
-    "paragraph1": "¡Hola! Mi nombre es Eduardo Fuentes, Ingeniero de Software con más de 5 años de experiencia diseñando y desarrollando aplicaciones backend para sistemas de misión crítica, participando en proyectos de modernización, migración e integración de plataformas en entornos de alta disponibilidad.",
-    "paragraph2": "Mi principal enfoque es el desarrollo backend con Java (Spring Boot) y Node.js (Express y NestJS), aplicando principios como SOLID, Clean Architecture, diseño orientado al dominio y buenas prácticas de testing para construir software mantenible y escalable. Aunque mi especialidad es el backend, también tengo experiencia desarrollando interfaces con React, lo que me permite colaborar en el stack completo y comunicarme de forma efectiva con equipos frontend.",
-    "paragraph3": "A lo largo de mi carrera he incrementado la disponibilidad y resiliencia de un servicio crítico de ChileCompra mediante una migración hacia una arquitectura desacoplada, participado en el desarrollo de una solución de Fast Checkout para Ripley y optimizado consultas e índices en bases de datos, reduciendo significativamente los tiempos de respuesta de procesos críticos.",
-    "paragraph4": "En mi tiempo libre exploro nuevas herramientas y frameworks, y también genero contenido sobre tecnología. Mi objetivo es seguir creciendo hacia roles donde pueda aportar no solo escribiendo código, sino también diseñando sistemas escalables, tomando decisiones de arquitectura y construyendo productos con impacto. Si estás interesado en colaborar o simplemente quieres hablar sobre tecnología, no dudes en contactarme.",
+    "sections": [
+      {
+        "label": "Perfil",
+        "text": "¡Hola! Mi nombre es Eduardo Fuentes, Ingeniero de Software con más de 5 años de experiencia diseñando y desarrollando aplicaciones backend para sistemas de misión crítica, participando en proyectos de modernización, migración e integración de plataformas en entornos de alta disponibilidad."
+      },
+      {
+        "label": "Stack",
+        "text": "Mi principal enfoque es el desarrollo backend con Java (Spring Boot) y Node.js (Express y NestJS), aplicando principios como SOLID, Clean Architecture, diseño orientado al dominio y buenas prácticas de testing para construir software mantenible y escalable. Aunque mi especialidad es el backend, también tengo experiencia desarrollando interfaces con React, lo que me permite colaborar en el stack completo y comunicarme de forma efectiva con equipos frontend."
+      },
+      {
+        "label": "Logros",
+        "text": "Los hitos más relevantes de mi carrera — la migración a arquitectura desacoplada de un servicio crítico de ChileCompra, Fast Checkout para Ripley y la optimización de consultas que redujo tiempos de respuesta — están detallados rol por rol en la sección de Experiencia."
+      },
+      {
+        "label": "Objetivo",
+        "text": "En mi tiempo libre exploro nuevas herramientas y frameworks, y también genero contenido sobre tecnología. Mi objetivo es seguir creciendo hacia roles donde pueda aportar no solo escribiendo código, sino también diseñando sistemas escalables, tomando decisiones de arquitectura y construyendo productos con impacto. Si estás interesado en colaborar o simplemente quieres hablar sobre tecnología, no dudes en contactarme."
+      }
+    ],
     "imageAlt": "Imagen de edudev"
   },
   "experience": {
     "title": "Experiencia",
+    "stats": {
+      "roles": "roles",
+      "since": "primer rol",
+      "years": "años de trayectoria"
+    },
     "jobs": [
       {
         "id": 1,
         "date": "Enero 2020 - Febrero 2020",
         "title": "Desarrollador Web",
         "company": "Anticipa S.A.",
-        "description": "Mantención y desarrollo de nuevas funcionalidades en la plataforma web institucional (SENCE) utilizando .NET. Corrección de bugs y mejoras en módulos existentes."
+        "description": [
+          "Mantuve y extendí la plataforma web institucional SENCE en .NET, agregando funcionalidades nuevas sin interrumpir el servicio en producción.",
+          "Corregí bugs y mejoré la estabilidad de módulos existentes de cara a los usuarios finales."
+        ]
       },
       {
         "id": 2,
         "date": "Junio 2021 - Febrero 2022",
         "title": "Analista de Programación",
         "company": "AMS Asicom Mobile Solutions",
-        "description": "Desarrollo y soporte backend para clientes corporativos utilizando PHP (CodeIgniter, WordPress), Java y Go. Optimización de servicios e integración entre sistemas. Configuración y administración de entornos Linux y VPN para garantizar seguridad y continuidad operativa. Coordinación de mantenciones y despliegues a producción."
+        "description": [
+          "Desarrollé y di soporte backend a clientes corporativos con PHP (CodeIgniter, WordPress), Java y Go.",
+          "Optimicé la integración entre sistemas, mejorando la comunicación entre servicios internos y externos.",
+          "Configuré y administré entornos Linux y VPN, garantizando seguridad y continuidad operativa del servicio.",
+          "Coordiné mantenciones y despliegues a producción, asegurando continuidad del servicio."
+        ]
       },
       {
         "id": 3,
         "date": "Marzo 2022 - Julio 2022",
         "title": "Desarrollador Backend | Mercado Público",
         "company": "Qintess",
-        "description": "Desarrollo y mantenimiento de microservicios con Java 8 y Spring Boot bajo arquitectura REST. Implementación de patrones de diseño (DAO, DTO, Inyección de Dependencias) para mejorar modularidad. Mejora de calidad de código y estabilidad del sistema. Trabajo con GitFlow y metodología Scrum."
+        "description": [
+          "Desarrollé y mantuve microservicios REST con Java 8 y Spring Boot para Mercado Público.",
+          "Apliqué patrones de diseño (DAO, DTO, Inyección de Dependencias) que mejoraron la modularidad y mantenibilidad del código.",
+          "Elevé la calidad y estabilidad del sistema trabajando bajo GitFlow y metodología Scrum."
+        ]
       },
       {
         "id": 4,
         "date": "Agosto 2022 - Septiembre 2025",
         "title": "Ingeniero de Software | Mercado Público | Fábrica | Ripley",
         "company": "InovaBiz",
-        "description": "Diseño e implementación de microservicios backend utilizando Node.js (Express, NestJS) y Java (Spring Boot). Desarrollo y consumo de APIs RESTful para integración con sistemas internos y externos. Participación en migraciones y modernización de sistemas hacia arquitecturas desacopladas. Optimización de consultas y modelamiento de datos en PostgreSQL y MongoDB. Implementación de testing automatizado con Jest y JUnit bajo enfoque TDD, aplicando principios SOLID y Clean Architecture.\n\nProyectos relevantes: Ripley (creación y migración de microservicios para nuevo producto digital), Innovación-Fábrica (sistema de pruebas end-to-end con automatización e ingeniería de prompts), ChileCompra - Consultas al Mercado (migración de módulo crítico) y Registro de Proveedores (optimización y resolución de bugs en sistema crítico del sector público)."
+        "description": [
+          "Lideré la migración de un servicio crítico de ChileCompra (Consultas al Mercado) hacia una arquitectura desacoplada, incrementando su disponibilidad y resiliencia en producción.",
+          "Participé en el desarrollo de Fast Checkout para Ripley, diseñando microservicios backend con Node.js (Express, NestJS) y Java (Spring Boot).",
+          "Optimicé consultas e índices en PostgreSQL y MongoDB, reduciendo significativamente los tiempos de respuesta de procesos críticos.",
+          "Implementé testing automatizado (Jest, JUnit) bajo TDD y apliqué SOLID/Clean Architecture en Innovación-Fábrica (sistema de pruebas end-to-end) y Registro de Proveedores.",
+          "Trabajé con sistemas distribuidos que se comunicaban vía Kafka, desacoplando el procesamiento entre servicios.",
+          "Desarrollé features y mantenciones full-stack con React, Spring Boot y SQL Server."
+        ]
       },
       {
         "id": 5,
         "date": "Octubre 2025 - Actualidad",
         "title": "Ingeniero de Software | Mercado Público",
         "company": "TicMoAI",
-        "description": "Desarrollo y mantenimiento de microservicios backend en entorno productivo de alta criticidad para Mercado Público / ChileCompra, construidos con Spring Boot bajo arquitectura modular. Sincronización entre bases de datos transaccionales y réplicas en Amazon Aurora PostgreSQL, asegurando consistencia y rendimiento. Revisión y optimización de funciones serverless en AWS. Resolución de incidencias críticas y mejora continua de estándares técnicos y documentación."
+        "description": [
+          "Desarrollo y mantengo microservicios backend en un entorno productivo de alta criticidad para Mercado Público / ChileCompra, con Spring Boot.",
+          "Sincronizo bases de datos transaccionales con réplicas en Amazon Aurora PostgreSQL, asegurando consistencia y rendimiento.",
+          "Reviso y optimizo funciones serverless en AWS, resolviendo incidencias críticas y mejorando estándares técnicos y documentación.",
+          "Trabajo con sistemas distribuidos que se comunican vía Kafka para desacoplar el procesamiento entre servicios.",
+          "Desarrollo features y mantenciones full-stack con React, Spring Boot y SQL Server."
+        ]
       }
     ]
   },
   "projects": {
-    "githubLink": "Si tienes tiempo, revisa mi Github para ver más proyectos y contribuciones!"
+    "githubLink": "Si tienes tiempo, revisa mi Github para ver más proyectos y contribuciones!",
+    "featuredLabel": "Proyecto destacado",
+    "featured": {
+      "title": "FinanceHub — De no-code a producción",
+      "description": "Migración completa de una plataforma de finanzas personales desde una herramienta no-code (Base44) a un stack propio, aplicando disciplina de spec-driven development: contrato de API y schema de base de datos fijos antes de escribir código, y verificación contra un sistema real (nunca solo tests en verde) en cada tarea. Desplegado a producción en Cloud Run con CI/CD real vía GitHub Actions.",
+      "metrics": [
+        { "value": "80", "label": "endpoints REST" },
+        { "value": "177", "label": "tests pasando" },
+        { "value": "20", "label": "tablas con RLS" },
+        { "value": "0", "label": "llaves de larga duración (Workload Identity Federation)" }
+      ],
+      "stack": ["React", "Vite", "Spring Boot", "PostgreSQL / Supabase", "GitHub Actions", "Google Cloud Run"],
+      "status": "Repositorio privado — link disponible próximamente"
+    }
+  },
+  "articleDetail": {
+    "backToArticles": "← Volver a artículos",
+    "publishedOn": "Publicado originalmente en dev.to"
   },
   "seo": {
     "title": "Portafolio | Eduardo Fuentes Reyes Ingeniero de Software",

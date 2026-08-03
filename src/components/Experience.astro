@@ -1,19 +1,36 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro";
+import ExperienceDiagram from "./ExperienceDiagram";
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const EXPERIENCE = t('experience.jobs');
+
+const startYears = EXPERIENCE.map((job: { date: string }) => {
+  const match = job.date.match(/\d{4}/);
+  return match ? parseInt(match[0], 10) : null;
+}).filter((year: number | null): year is number => year !== null);
+
+const startYear = Math.min(...startYears);
+const yearsOfExperience = new Date().getFullYear() - startYear;
+
+const STATS = [
+  { value: String(EXPERIENCE.length), label: t('experience.stats.roles') },
+  { value: String(startYear), label: t('experience.stats.since') },
+  { value: `${yearsOfExperience}+`, label: t('experience.stats.years') },
+];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">
+<div class="mb-8 grid grid-cols-3 gap-4 rounded-lg border border-blueprint-line bg-blueprint-panel/60 p-6">
   {
-    EXPERIENCE.map((experience: any) => (
-      <li class="mb-10 ms-4">
-        <ExperienceItem {...experience} />
-      </li>
-    )).reverse()
+    STATS.map((stat) => (
+      <div class="text-center">
+        <p class="font-mono text-2xl font-bold text-blueprint-accent">{stat.value}</p>
+        <p class="mt-1 text-[11px] text-slate-400">{stat.label}</p>
+      </div>
+    ))
   }
-</ol>
+</div>
+
+<ExperienceDiagram jobs={EXPERIENCE} client:visible />
