@@ -82,11 +82,10 @@
         "title": "Software Engineer | Public Market | Factory | Ripley",
         "company": "InovaBiz",
         "description": [
-          "Led the migration of a critical ChileCompra service (Consultas al Mercado) to a decoupled architecture, increasing its availability and resilience in production.",
+          "Participant of critical migration  ChileCompra services to a decoupled architecture, increasing its availability and resilience in production.",
           "Contributed to Fast Checkout for Ripley, designing backend microservices with Node.js (Express, NestJS) and Java (Spring Boot).",
           "Optimized queries and indexes in PostgreSQL and MongoDB, significantly reducing response times for critical processes.",
           "Implemented automated testing (Jest, JUnit) under TDD and applied SOLID/Clean Architecture on Innovación-Fábrica (end-to-end testing system) and Registro de Proveedores.",
-          "Worked with distributed systems communicating via Kafka, decoupling processing between services.",
           "Developed full-stack features and maintenance with React, Spring Boot, and SQL Server."
         ]
       },
@@ -115,9 +114,19 @@
         { "value": "80", "label": "REST endpoints" },
         { "value": "177", "label": "passing tests" },
         { "value": "20", "label": "tables with RLS" },
-        { "value": "0", "label": "long-lived keys (Workload Identity Federation)" }
+        {
+          "value": "0",
+          "label": "long-lived keys (Workload Identity Federation)"
+        }
       ],
-      "stack": ["React", "Vite", "Spring Boot", "PostgreSQL / Supabase", "GitHub Actions", "Google Cloud Run"],
+      "stack": [
+        "React",
+        "Vite",
+        "Spring Boot",
+        "PostgreSQL / Supabase",
+        "GitHub Actions",
+        "Google Cloud Run"
+      ],
       "status": "Private repository — link coming soon"
     }
   },

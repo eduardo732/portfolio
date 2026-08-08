@@ -82,7 +82,7 @@
         "title": "Ingeniero de Software | Mercado Público | Fábrica | Ripley",
         "company": "InovaBiz",
         "description": [
-          "Lideré la migración de un servicio crítico de ChileCompra (Consultas al Mercado) hacia una arquitectura desacoplada, incrementando su disponibilidad y resiliencia en producción.",
+          "Participé en la migración de servicios críticos de ChileCompra hacia una arquitectura desacoplada, incrementando su disponibilidad y resiliencia en producción.",
           "Participé en el desarrollo de Fast Checkout para Ripley, diseñando microservicios backend con Node.js (Express, NestJS) y Java (Spring Boot).",
           "Optimicé consultas e índices en PostgreSQL y MongoDB, reduciendo significativamente los tiempos de respuesta de procesos críticos.",
           "Implementé testing automatizado (Jest, JUnit) bajo TDD y apliqué SOLID/Clean Architecture en Innovación-Fábrica (sistema de pruebas end-to-end) y Registro de Proveedores.",
@@ -115,9 +115,19 @@
         { "value": "80", "label": "endpoints REST" },
         { "value": "177", "label": "tests pasando" },
         { "value": "20", "label": "tablas con RLS" },
-        { "value": "0", "label": "llaves de larga duración (Workload Identity Federation)" }
+        {
+          "value": "0",
+          "label": "llaves de larga duración (Workload Identity Federation)"
+        }
       ],
-      "stack": ["React", "Vite", "Spring Boot", "PostgreSQL / Supabase", "GitHub Actions", "Google Cloud Run"],
+      "stack": [
+        "React",
+        "Vite",
+        "Spring Boot",
+        "PostgreSQL / Supabase",
+        "GitHub Actions",
+        "Google Cloud Run"
+      ],
       "status": "Repositorio privado — link disponible próximamente"
     }
   },
