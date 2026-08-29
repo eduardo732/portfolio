@@ -7,6 +7,11 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const PROJECT = t('projects.featured');
+const OTHER_PROJECTS = t('projects.other');
+
+let base = import.meta.env.BASE_URL || '/';
+if (!base.startsWith('/')) base = '/' + base;
+if (!base.endsWith('/')) base = base + '/';
 ---
 <div class="flex flex-col gap-y-8">
   <div class="rounded-lg border border-blueprint-line bg-blueprint-panel/60 p-6">
@@ -48,6 +53,47 @@ const PROJECT = t('projects.featured');
       {PROJECT.status}
     </p>
   </div>
+
+  <div>
+    <span class="font-mono text-xs uppercase tracking-widest text-blueprint-accent">
+      // {t('projects.otherLabel')}
+    </span>
+
+    <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+      {
+        OTHER_PROJECTS.map((project: { title: string; description: string; image: string; link: string; linkLabel: string; stack: string[] }) => (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col overflow-hidden rounded-lg border border-blueprint-line bg-blueprint-panel/60 transition hover:border-blueprint-accent/60"
+          >
+            <img
+              src={`${base}projects/${project.image}`}
+              alt={project.title}
+              class="h-40 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="flex flex-1 flex-col p-4">
+              <h4 class="text-sm font-semibold text-slate-100">{project.title}</h4>
+              <p class="mt-2 text-justify text-xs text-slate-300">{project.description}</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                {project.stack.map((tech: string) => (
+                  <span class="rounded-full bg-blueprint-accent/10 px-1.5 py-0.5 text-[10px] text-blueprint-accent">
+                    #{tech}
+                  </span>
+                ))}
+              </div>
+              <span class="mt-3 font-mono text-[11px] uppercase tracking-widest text-blueprint-accent group-hover:underline">
+                {project.linkLabel} →
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
   <div class="flex justify-center">
     <Bubble ref="https://github.com/eduardo732">
       <Github class="size-6" />

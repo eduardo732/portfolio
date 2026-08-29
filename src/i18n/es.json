@@ -129,7 +129,26 @@
         "Google Cloud Run"
       ],
       "status": "Repositorio privado — link disponible próximamente"
-    }
+    },
+    "otherLabel": "Otros proyectos",
+    "other": [
+      {
+        "title": "Portal para psicóloga clínica",
+        "description": "Landing page profesional para una psicóloga independiente en Chile: enfoque terapéutico, tarifas, testimonios y preguntas frecuentes, con agendamiento vía WhatsApp. Dominio propio y trabajo de SEO técnico (Search Console, datos estructurados).",
+        "image": "psicologa-camila.webp",
+        "link": "https://psicologacamilabastias.cl",
+        "linkLabel": "Ver sitio en vivo",
+        "stack": ["Next.js", "PostgreSQL", "Vercel"]
+      },
+      {
+        "title": "Clean Architecture + CQRS",
+        "description": "Boilerplate de microservicio en Spring Boot que aplica Arquitectura Hexagonal y CQRS, separando comandos y queries en buses independientes para mantener el dominio aislado de infraestructura y presentación.",
+        "image": "cleanArquitecture.webp",
+        "link": "https://github.com/eduardo732/clean-architecture-cqrs",
+        "linkLabel": "Ver repositorio",
+        "stack": ["Java", "Spring Boot", "CQRS"]
+      }
+    ]
   },
   "articleDetail": {
     "backToArticles": "← Volver a artículos",
